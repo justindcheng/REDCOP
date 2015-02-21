@@ -24,11 +24,11 @@ public class PlayerMovement : MonoBehaviour
 		movementVector.z = 0;
 		if(Input.GetButtonDown("A"))
 		{
-			movementVector.x += 10*movementSpeed;
+			movementVector.x -= 10*movementSpeed;
 		}
 		if(Input.GetButtonDown("D"))
 		{
-			movementVector.x -= 10*movementSpeed;
+			movementVector.x += 10*movementSpeed;
 		}
 
 		characterController.Move(movementVector * Time.deltaTime);

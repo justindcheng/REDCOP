@@ -24,11 +24,11 @@ public class PlayerMovement2 : MonoBehaviour
 		movementVector1.z = 0;
 		if(Input.GetButtonDown("left"))
 		{
-			movementVector1.x += 10*movementSpeed;
+			movementVector1.x -= 10*movementSpeed;
 		}
 		if(Input.GetButtonDown("right"))
 		{
-			movementVector1.x -= 10*movementSpeed;
+			movementVector1.x += 10*movementSpeed;
 		}
 
 		
