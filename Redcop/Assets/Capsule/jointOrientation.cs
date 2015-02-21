@@ -35,7 +35,7 @@ public class jointOrientation : MonoBehaviour {
 		
 		// Update references when the pose becomes fingers spread or the q key is pressed.
 		bool updateReference = false;
-		if (thalmicMyo.pose != _lastPose) {
+		/*if (thalmicMyo.pose != _lastPose) {
 			_lastPose = thalmicMyo.pose;
 			
 			if (thalmicMyo.pose == Pose.FingersSpread) {
@@ -43,7 +43,7 @@ public class jointOrientation : MonoBehaviour {
 				
 				ExtendUnlockAndNotifyUserAction(thalmicMyo);
 			}
-		}
+		}*/
 		if (Input.GetKeyDown ("r")) {
 			updateReference = true;
 		}
@@ -85,7 +85,7 @@ public class jointOrientation : MonoBehaviour {
 		// The above calculations were done assuming the Myo armbands's +x direction, in its own coordinate system,
 		// was facing toward the wearer's elbow. If the Myo armband is worn with its +x direction facing the other way,
 		// the rotation needs to be updated to compensate.
-		if (thalmicMyo.xDirection == Thalmic.Myo.XDirection.TowardWrist) {
+		//if (thalmicMyo.xDirection == Thalmic.Myo.XDirection.TowardWrist) {
 			// Mirror the rotation around the XZ plane in Unity's coordinate system (XY plane in Myo's coordinate
 			// system). This makes the rotation reflect the arm's orientation, rather than that of the Myo armband.
 			transform.rotation = new Quaternion(transform.localRotation.x,
@@ -93,7 +93,7 @@ public class jointOrientation : MonoBehaviour {
 			                                    transform.localRotation.z,
 			                                    -transform.localRotation.w);
 			//transform.Translate(thalmicMyo.accelerometer);
-		}
+		//}
 	}
 	
 	// Compute the angle of rotation clockwise about the forward axis relative to the provided zero roll direction.
