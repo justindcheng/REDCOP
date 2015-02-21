@@ -33,6 +33,7 @@ public class PlayerMovement2 : MonoBehaviour
 			movementVector1.y = 0; 
 		}
 		movementVector1.x = 0;
+		movementVector1.z = 0;
 		if(Input.GetButtonDown("left"))
 		{
 			movementVector1.x -= 10*movementSpeed;
@@ -41,7 +42,14 @@ public class PlayerMovement2 : MonoBehaviour
 		{
 			movementVector1.x += 10*movementSpeed;
 		}
-
+		if(Input.GetButtonDown("up"))
+		{
+			movementVector1.y -= 10*movementSpeed;
+		}
+		if(Input.GetButtonDown("down"))
+		{
+			movementVector1.y += 10*movementSpeed;
+		}
 		
 		characterController1.Move(movementVector1 * Time.deltaTime);
 		

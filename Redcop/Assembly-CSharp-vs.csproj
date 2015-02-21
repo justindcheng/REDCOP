@@ -62,6 +62,9 @@
      <Compile Include="Assets\Myo\Scripts\Myo.NET\libmyo.cs" />
      <Compile Include="Assets\Myo\Scripts\ThalmicHub.cs" />
      <Compile Include="Assets\Myo\Scripts\ThalmicMyo.cs" />
+     <Compile Include="Assets\baseballspherecollision.cs" />
+     <Compile Include="Assets\rotator.cs" />
+     <Compile Include="Assets\testing.cs" />
      <None Include="Assets\Myo\README-MyoUnity.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
